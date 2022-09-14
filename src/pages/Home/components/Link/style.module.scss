@@ -1,0 +1,17 @@
+.button {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(#{--card-background-default});
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0 20px 0;
+    width: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: var(#{--text-color-default});
+}
