@@ -1,37 +1,34 @@
 import React from 'react';
 import s from './DayInfo.module.scss';
 import cloud from '../../../../assets/images/cloud.png';
+import { arrayDays } from '../ArrayDays';
 import { useSelector } from 'react-redux';
 import { DayItem } from './DayItem';
 
 export const DayInfo = () => {
   const weather = useSelector((store) => store);
-  const temp = Math.round(weather?.list?.[0]?.main?.temp);
-  const tempFeels = Math.round(weather?.list?.[0]?.main?.feels_like);
-  const humidity = weather?.list?.[0]?.main?.humidity;
-  const description = weather?.list?.[0]?.weather?.[0]?.description;
-  const wind = weather?.list?.[0]?.wind?.speed;
+  const dataWeather = arrayDays(weather);
 
   const items = [
     {
       icon_id: 'temp',
       name: 'Температура',
-      value: `${temp || ''}° - ощущается как ${tempFeels || ''}°`,
+      value: `${dataWeather[0]?.temp_day} - ощущается как ${dataWeather[0]?.temp_Feels}`,
     },
     {
       icon_id: 'pressure',
       name: 'Влажность',
-      value: `${humidity || ''} %`,
+      value: `${dataWeather[0]?.humidity} %`,
     },
     {
       icon_id: 'precipitation',
       name: 'Осадки',
-      value: `${description || ''}`,
+      value: `${dataWeather[0]?.info}`,
     },
     {
       icon_id: 'wind',
       name: 'Ветер',
-      value: `${wind || ''} м/с`,
+      value: `${dataWeather[0]?.wind} м/с`,
     },
   ];
   return (
