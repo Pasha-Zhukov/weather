@@ -2,6 +2,7 @@ import React from 'react';
 import s from './DayInfo.module.scss';
 import cloud from '../../../../assets/images/cloud.png';
 import { arrayDays } from '../ArrayDays';
+import { Loader } from '../../../../loader/Loader';
 import { useSelector } from 'react-redux';
 import { DayItem } from './DayItem';
 
@@ -33,11 +34,15 @@ export const DayInfo = () => {
   ];
   return (
     <div className={s.day_info}>
-      <div>
-        {items.map((item) => (
-          <DayItem key={item.icon_id} item={item} />
-        ))}
-      </div>
+      {weather?.isLoading ? (
+        <Loader />
+      ) : (
+        <div>
+          {items.map((item) => (
+            <DayItem key={item.icon_id} item={item} />
+          ))}
+        </div>
+      )}
       <img className={s.cloud_img} src={cloud} alt="облако" />
     </div>
   );
