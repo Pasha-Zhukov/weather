@@ -1,7 +1,7 @@
 import React from 'react';
-import { Route, Routes } from 'react-router';
+// import { Route, Routes } from 'react-router';
 import { Home } from './pages/Home/Home';
-import { Health } from './pages/Health/Health';
+// import { Health } from './pages/Health/Health';
 import { Header } from './components/Header/Header';
 
 function App() {
@@ -9,10 +9,11 @@ function App() {
     <div className="global-container">
       <div className="container">
         <Header />
-        <Routes>
+        <Home />
+        {/* <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/info" element={<Health />} />
-        </Routes>
+        </Routes> */}
       </div>
     </div>
   );
