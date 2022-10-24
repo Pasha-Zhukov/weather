@@ -1,7 +1,8 @@
 import React from 'react';
 // import { Route, Routes } from 'react-router';
-import { Home } from './pages/Home/Home';
 // import { Health } from './pages/Health/Health';
+import { Home } from './pages/Home/Home';
+
 import { Header } from './components/Header/Header';
 
 function App() {
