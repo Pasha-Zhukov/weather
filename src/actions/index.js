@@ -6,7 +6,7 @@ export const fetchWeather = (city) => (dispatch) => {
   return axios
     .get(url)
     .then((response) => dispatch(receiveWeather(response.data)))
-    .catch(() => dispatch(requestWeatherError()));
+    .catch(() => dispatch(requestWeatherError(dispatch)));
 };
 
 export const requestWeather = () => ({
@@ -18,7 +18,8 @@ export const receiveWeather = (json) => ({
   payload: json,
 });
 // Экшен для обработки не правильно введенного города
-export const requestWeatherError = () => ({
+export const requestWeatherError = (dispatch) => ({
   type: 'ERROR_WEATHER',
   error: alert('Город не найден! \nПроверьте правильно ли Вы ввели название города'),
+  request: dispatch(fetchWeather('Москва')),
 });
