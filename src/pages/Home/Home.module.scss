@@ -3,3 +3,10 @@
   justify-content: space-between;
   margin-bottom: 50px;
 }
+@media (max-width: 575px) {
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+}

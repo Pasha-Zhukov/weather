@@ -40,3 +40,28 @@
     font-size: 25px;
   }
 }
+
+@media (max-width: 575px) {
+  .top__block {
+    margin-bottom: 10px;
+
+    .this__temp {
+      font-size: 50px;
+    }
+
+    .this__day_name {
+      font-size: 25px;
+    }
+  }
+  .this__day {
+    padding: 10px;
+    max-width: 100%;
+    width: 100%;
+  }
+  .bottom__block {
+    .this__time,
+    .this__city {
+      font-size: 20px;
+    }
+  }
+}

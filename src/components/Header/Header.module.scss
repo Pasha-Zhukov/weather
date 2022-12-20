@@ -63,3 +63,36 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+@media (max-width: 575px) {
+  .header {
+    margin-bottom: 10px;
+  }
+  .title {
+    display: none;
+  }
+  .logo {
+    svg {
+      width: 55px;
+      height: 55px;
+    }
+    margin-left: 10px;
+  }
+  .input {
+    width: 90%;
+    height: 20px;
+    font-size: 14px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    float: right;
+  }
+  .btn {
+    width: 80px;
+    height: 20px;
+    font-size: 14px;
+    margin-right: 20px;
+    padding: 0;
+    float: right;
+    color: white;
+  }
+}

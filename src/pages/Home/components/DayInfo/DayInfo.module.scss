@@ -57,3 +57,29 @@
   right: 0;
   border-radius: 7%;
 }
+@media (max-width: 575px) {
+  .cloud_img {
+    display: none;
+  }
+  .day_info {
+    position: relative;
+    margin-top: 10px;
+    padding: 5px;
+    max-width: 575px;
+  }
+  .item {
+    margin-bottom: 10px;
+    .indicator {
+      width: 28px;
+      height: 28px;
+    }
+    .indicator_name,
+    .indicator_value {
+      font-size: 12px;
+      z-index: 1;
+    }
+    .indicator_name {
+      display: none;
+    }
+  }
+}
